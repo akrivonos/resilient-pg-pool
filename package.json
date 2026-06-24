@@ -1,0 +1,44 @@
+{
+  "name": "resilient-pg-pool",
+  "version": "0.1.0",
+  "description": "A node-postgres Pool that survives Postgres restarts: keepalive, fast-fail checkout, idle-error handling, and backoff retry on transient socket errors.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "postgres",
+    "pg",
+    "pool",
+    "reconnect",
+    "resilient",
+    "econnreset",
+    "retry",
+    "failover"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "pg": ">=8"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.0",
+    "pg": "^8.11.0",
+    "typescript": "^5.4.0"
+  }
+}
